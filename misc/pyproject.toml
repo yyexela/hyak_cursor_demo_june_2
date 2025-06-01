@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools >= 64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transformer_sindy_shred"
+version = "0.1"
+dependencies = [
+    "einops>=0.8.1",
+    "matplotlib>=3.10.1",
+    "numpy>=2.2.5",
+    "scikit_learn>=1.6.1",
+    "torch>=2.7.0",
+    "the_well>=1.1.0",
+    "plotly==5.3.1",
+    "nbformat>=5.10.4",
+    "kaleido>=0.2.1",
+    "scipy>=1.15.3",
+    "tqdm>=4.67.1",
+    "palettable>=3.3.3",
+    "pyfiglet>=1.0.2"
+]
+requires-python = ">=3.8"
+description = "Transformer SINDy-SHRED"
+
+[project.urls]
+Homepage = "https://github.com/yyexela/T-SHRED"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = []
+namespaces = true
+
+[project.optional-dependencies]
+all = ["jupyterlab","imageio"]
+
